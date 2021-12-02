@@ -13,3 +13,5 @@ Feature: Orders Creations
     When method POST
     Then status 201
     And print 'Response:' , response
+    And match response == read('valuesPresent.json')
+    And match response == read('expectedValues.json')
